@@ -62,19 +62,19 @@ startButton.addEventListener("click", function() {
       option4.textContent = questions[0].options[3];
 
       option1.addEventListener("click", function() { 
-        alert('wrong');
+       // alert('wrong');
         question2();
     })
       option2.addEventListener("click", function() { 
-          alert('wrong');
+       //   alert('wrong');
           question2();
     })
       option3.addEventListener("click", function() { 
-          alert('correct')
+      //    alert('correct')
           question2();
     })
       option4.addEventListener("click", function() { 
-        alert('wrong');
+      //  alert('wrong');
         question2();
     })
   };
@@ -86,17 +86,80 @@ startButton.addEventListener("click", function() {
     option2.textContent = questions[1].options[1];
     option3.textContent = questions[1].options[2];
     option4.textContent = questions[1].options[3];
-
-
+    option1.addEventListener("click", function() { 
+       // alert('wrong');
+        question3();
+    })
+      option2.addEventListener("click", function() { 
+        //  alert('wrong');
+          question3();
+    })
+      option3.addEventListener("click", function() { 
+        //  alert('correct')
+          question3();
+    })
+      option4.addEventListener("click", function() { 
+      //  alert('wrong');
+        question3();
+    })
   }
-
-  function selectAnswer() {
+  function question3() {
+    questionsEl.textContent = questions[2].question;
+    option1.textContent = questions[2].options[0];
+    option2.textContent = questions[2].options[1];
+    option3.textContent = questions[2].options[2];
+    option4.textContent = questions[2].options[3];
+    option1.addEventListener("click", function() { 
+      //  alert('wrong');
+        question4();
+    })
+      option2.addEventListener("click", function() { 
+      //    alert('wrong');
+          question4();
+    })
+      option3.addEventListener("click", function() { 
+       //   alert('wrong')
+          question4();
+    })
+      option4.addEventListener("click", function() { 
+      //  alert('correct');
+        question4();
+    })
+  }
+  function question4() {
+    questionsEl.textContent = questions[3].question;
+    option1.textContent = questions[3].options[0];
+    option2.textContent = questions[3].options[1];
+    option3.textContent = questions[3].options[2];
+    option4.textContent = questions[3].options[3];
+    option1.addEventListener("click", function() { 
+        //  alert('wrong');
+          question5();
+      })
+        option2.addEventListener("click", function() { 
+        //    alert('wrong');
+            question5();
+      })
+        option3.addEventListener("click", function() { 
+         //   alert('correct')
+            question5();
+      })
+        option4.addEventListener("click", function() { 
+        //  alert('wrong');
+          question5();
+      })
+  }
+  function question5() {
+    questionsEl.textContent = questions[4].question;
+    option1.textContent = questions[4].options[0];
+    option2.textContent = questions[4].options[1];
+    option3.textContent = questions[4].options[2];
+    option4.textContent = questions[4].options[3];
 
   }
 
 
   startButton.addEventListener("click", startGame);
-  option3.addEventListener("click", question2);
-
+ 
 
 
