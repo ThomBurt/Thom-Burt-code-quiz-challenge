@@ -56,20 +56,18 @@ startButton.addEventListener("click", function() {
       startButton.className = "hide";
       paragraph1.className = "hide";
       optionsEl.classList.remove('hide');
-      //option1.textContent = "Strings";
       option1.textContent = questions[0].options[0];
-      //option2.textContent = "Booleans";
       option2.textContent = questions[0].options[1];
-      //option3.textContent = "Alerts";
       option3.textContent = questions[0].options[2];
-      //option4.textContent = "Numbers";
       option4.textContent = questions[0].options[3];
 
       option1.addEventListener("click", function() { 
         alert('wrong');
+        question2();
     })
       option2.addEventListener("click", function() { 
           alert('wrong');
+          question2();
     })
       option3.addEventListener("click", function() { 
           alert('correct')
@@ -77,6 +75,7 @@ startButton.addEventListener("click", function() {
     })
       option4.addEventListener("click", function() { 
         alert('wrong');
+        question2();
     })
   };
   
