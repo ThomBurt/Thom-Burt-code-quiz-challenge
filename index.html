@@ -11,7 +11,9 @@
 
 <body>
     <header>
+        <a href="highscores.html">
         <h2>View high scores</h2>
+        </a>
         <div class=timer>
             <div class="time-text"> 
                 Time Left:
@@ -24,9 +26,9 @@
 
 <main>
     <section>
-        <div>
-            <h1>Coding Quiz Challenge</h1>
-            <p>
+        <div id="start-quiz">
+            <h1 id="questions">Coding Quiz Challenge</h1>
+            <p id="paragraph-pg1">
                 Try to answer the following code related questions within the time limit. <br>
                 Keep in mind that incorrect answers will penalize your score/time <br>
                 by ten seconds!
@@ -34,11 +36,18 @@
             <button id="start-btn">Start Quiz</button>
         </div>
     </section>
+
+        <div id="options" class="options-div, hide">
+            <button id="option1" class="option-buttons">Option 1</button>
+            <button id="option2" class="option-buttons">Option 2</button>
+            <button id="option3" class="option-buttons">Option 3</button>
+            <button id="option4" class="option-buttons">Option 4</button>
+        </div>
+
+
 </main>
-
-
-<script src="assets/js/script.js"></script>
 <script src="assets/js/questions.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

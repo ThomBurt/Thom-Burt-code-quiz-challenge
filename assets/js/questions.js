@@ -47,56 +47,107 @@ let questions = [
   {
     numb: 1,
     question: "Commonly used data types DO NOT include:",
-    answer: "3. Alerts",
+    answer: "Alerts",
     options: [
-        "1. Strings",
-        "2. Booleans",
-        "3. Alerts",
-        "4. Numbers"
+        "Strings",
+        "Booleans",
+        "Alerts",
+        "Numbers"
     ]
   },
   {
     numb: 2,
     question: "The condition in an if / else statement is enclosed with _________.",
-    answer: "3. Parenthesis",
+    answer: "Parenthesis",
     options: [
-        "1. Quotes",
-        "2. Curly Brackets",
-        "3. Parenthesis",
-        "4. Square Brackets"
+        "Quotes",
+        "Curly Brackets",
+        "Parenthesis",
+        "Square Brackets"
     ]
   },
   {
     numb: 3,
     question: "Arrays in JavaScript can be used to store _______.",
-    answer:  "4. All of the above",
+    answer:  "All of the above",
     options: [
-        "1. Numbers and Strings",
-        "2. Other arrays",
-        "3. Booleans",
-        "4. All of the above"
+        "Numbers and Strings",
+        "Other arrays",
+        "Booleans",
+        "All of the above"
     ]
   },
   {
     numb: 4,
     question: "String values must be enclosed within ______ when bring assigned to variables.",
-    answer: "3. Quotes",
+    answer: "Quotes",
     options: [
-        "1. Commas",
-        "2. Curly Brackets",
-        "3. Quotes",
-        "4. Parenthesis"
+        "Commas",
+        "Curly Brackets",
+        "Quotes",
+        "Parenthesis"
     ]
   },
   {
     numb: 5,
     question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-    answer: "4. console.log",
+    answer: "console.log",
     options: [
-        "1. JavaScript",
-        "2. Terminal/Bash",
-        "3. For Loops",
-        "4. console.log"
+        "JavaScript",
+        "Terminal/Bash",
+        "For Loops",
+        "console.log"
+    ]
+  }
+];
+
+
+
+//other technique
+let questionsList = [
+  { //1
+    question: "Commonly used data types DO NOT include:",
+    options: [
+        {text: "Strings", correct: false},
+        {text: "Booleans", correct: false},
+        {text: "Alerts", correct: true },
+        {text: "Numbers", correct: false}
+    ]
+  },
+  { //2
+    question: "The condition in an if / else statement is enclosed with _________.",
+    options: [
+        {text: "Quotes", correct: false},
+        {text: "Curly Brackets", correct: false},
+        {text: "Parenthesis", correct: true },
+        {text: "Square Brackets", correct: false}
+    ]
+  },
+  { //3
+    question: "Arrays in JavaScript can be used to store _______.",
+    options: [
+        {text: "Number & Strings", correct: false},
+        {text: "Other Arrays", correct: false},
+        {text: "Booleans", correct: false },
+        {text: "All Of The Above", correct: true}
+    ]
+  },
+  { //4
+    question: "String values must be enclosed within ______ when bring assigned to variables.",
+    options: [
+        {text: "Commas", correct: false},
+        {text: "Curly Brackets", correct: false},
+        {text: "Quotes", correct: true },
+        {text: "Parenthesis", correct: false}
+    ]
+  },
+  { //5
+    question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    options: [
+        {text: "JavaScript", correct: false},
+        {text: "Terminal/Bash", correct: false},
+        {text: "For Loops", correct: false },
+        {text: "console.log", correct: true },
     ]
   }
 ];
