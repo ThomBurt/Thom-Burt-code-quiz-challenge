@@ -114,3 +114,27 @@ section div button:hover {
     transition: 0.2s;
 }
 
+.correct-wrong-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.correct {
+    font-style: italic;
+    width: 60%;
+    color: lightgray;
+    font-size: 40px;
+    border-top: 2px solid lightgray;
+
+}
+
+.wrong {
+    font-style: italic;
+    width: 60%;
+    color: lightgray;
+    font-size: 40px;
+    border-top: 2px solid lightgray;
+}

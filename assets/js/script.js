@@ -6,6 +6,9 @@ var option2 = document.querySelector('#option2')
 var option3 = document.querySelector('#option3')
 var option4 = document.querySelector('#option4')
 
+var correctPopup = document.querySelector('#correct')
+var wrongPopup = document.querySelector('#wrong')
+
 
 //sound fx
 var soundFxCorrect = new Audio("audio/correct.mp3");
@@ -33,33 +36,41 @@ startButton.addEventListener("click", function() {
 
   //START GAME BUTTON PRESS
   let currentQuestionIndex = 0;
+
   function startGame() {
     
     var currentQuestion = questions[currentQuestionIndex];
+
     startButton.className = "hide";
     paragraph1.className = "hide";
     optionsEl.classList.remove('hide');
     optionsEl.textContent = "";
+ 
     
     currentQuestion.options.forEach((answer, index) => {
       var buttonOption = document.createElement("button");
       buttonOption.setAttribute("class", "option-buttons")
-      buttonOption.textContent  = index +1 + ". " + answer// `${index + 1}. ${answer}`;
+      buttonOption.textContent  = `${index + 1}. ${answer}`;
       buttonOption.addEventListener('click', function () {
         answerClick(answer);
       });
     
       optionsEl.append(buttonOption)
-    })
+    });
 }
     function answerClick(answer) {
+      console.log('answer function')
       if (answer === questions[currentQuestionIndex].answer) {
         //console.log("right answer")
         soundFxCorrect.play();
+       // correctPopup.classList.remove('hide');
+        //wrongPopup.className = "hide";
       } else {
-        timeSecond = timeSecond-15;            // minus 15 if wrong   
+        timeSecond = timeSecond-15;  // minus 15 if wrong
         //console.log("wrong answer")
-        soundFxWrong.play();
+        soundFxWrong.play()
+       // wrongPopup.classList.remove('hide');
+        //correctPopup.className = "hide";
       }
       currentQuestionIndex++;
       startGame();
@@ -68,14 +79,7 @@ startButton.addEventListener("click", function() {
 
     startButton.addEventListener("click", startGame);
 
-
-
-    function allDone() {
-
-    }
-
-
-    
+  
 
   //START GAME BUTTON PRESS
 //   function startGame(){
