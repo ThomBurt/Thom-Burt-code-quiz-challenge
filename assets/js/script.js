@@ -6,29 +6,10 @@ var option2 = document.querySelector('#option2')
 var option3 = document.querySelector('#option3')
 var option4 = document.querySelector('#option4')
 
-// creating the buttons.
-// var option1 = document.createElement("Button")
-// var option2 = document.createElement("Button")
-// var option3 = document.createElement("Button")
-// var option4 = document.createElement("Button")
-
-// setting button classes
-// option1.className = 'btn';
-// option2.className = 'btn';
-// option3.className = 'btn';
-// option4.className = 'btn';
 
 //sound fx
 var soundFxCorrect = new Audio("audio/correct.mp3");
 var soundFxWrong = new Audio("audio/wrong.mp3");
-
-// question variables
-// var question1 = "Commonly used data types DO NOT include:";
-// var question2 = "The condition in an if / else statement is enclosed with _________.";
-// var question3 = "Arrays in JavaScript can be used to store _______.";
-// var question4 = "String values must be enclosed within ______ when bring assigned to variables.";
-// var question5 = "A very useful tool used during development and debugging for printing content to the debugger is:";
-
 
 // set variable for the start button
 var startButton = document.querySelector("#start-btn");
@@ -91,8 +72,7 @@ startButton.addEventListener("click", function() {
 
 
 
-
-
+    
 
 
 

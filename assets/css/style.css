@@ -1,6 +1,9 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    
 }
 
 
@@ -110,3 +113,4 @@ section div button:hover {
     background-color: blue;
     transition: 0.2s;
 }
+
