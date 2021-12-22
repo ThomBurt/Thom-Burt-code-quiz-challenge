@@ -53,15 +53,13 @@ startButton.addEventListener("click", function() {
     })
 }
     function answerClick(answer) {
-      console.log('answer function')
       if (answer === questions[currentQuestionIndex].answer) {
-        console.log("right answer")
+        //console.log("right answer")
         soundFxCorrect.play();
       } else {
-        timeSecond = timeSecond-15;  // minus 15 if wrong
-        countdownEl.innerHTML = timeSecond;    //this makes it change quicker
-        console.log("wrong answer")
-        soundFxWrong.play()
+        timeSecond = timeSecond-15;            // minus 15 if wrong   
+        //console.log("wrong answer")
+        soundFxWrong.play();
       }
       currentQuestionIndex++;
       startGame();
@@ -72,16 +70,12 @@ startButton.addEventListener("click", function() {
 
 
 
+    function allDone() {
+
+    }
+
+
     
-
-
-
-
-
-
-
-
-
 
   //START GAME BUTTON PRESS
 //   function startGame(){
