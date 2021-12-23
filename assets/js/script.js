@@ -115,13 +115,16 @@ function endQuiz() {
         localStorage.setItem(value, score)
         window.location.href = "highscores.html"
         
+    //TODO - how to get it into the text field of high scores
+        var highScoreTextField = document.querySelector("#highScoreTextField");
+        highScoreTextField.textContent = (value + score);
+       
+
+        });
     
-        // var done = document.getElementById("done")
-        // done.textContent= `Your final score is ' + ${score}`;
-    
-      });
-    
-    
+    // function setHighScoreTextBox(){
+    //   var value = []
+    // }
 
 
     //var highScoreHandler = function() {
