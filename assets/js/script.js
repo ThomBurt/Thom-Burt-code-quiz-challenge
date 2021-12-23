@@ -105,32 +105,58 @@ function endQuiz() {
 
 
 
+
+
+
     startButton.addEventListener("click", startGame);
     
     
     submitButtonEl.addEventListener("click", function(){
       var value = document.getElementById('input').value;
       var score = timeSecond;
-      console.log(value, score);
-        localStorage.setItem(value, score)
-        window.location.href = "highscores.html"
+      localStorage.setItem(value, score);
+      window.location.href = "highscores.html";
+        passingValue();
+
+     
+           });
+
+
+    // function passingValue(){
+    //   var scores = document.querySelector('#highScoreTextField');
+    //   scores.className = "hide";
+      // localStorage.getItem(value, score);
+      // scores.textContent = scores; 
+      // console.log(scores);
+    //}
         
-    //TODO - how to get it into the text field of high scores
-        var highScoreTextField = document.querySelector("#highScoreTextField");
-        highScoreTextField.textContent = (value + score);
+
+
+
+
+
+
+
+
+
+
+    //TODO - how to get it into the text field of high scores   --    pull it from local storage?
+        // var highScoreTextField = document.querySelector("#highScoreTextField");
+        // highScoreTextField.textContent = (value + score);
        
 
-        });
+      
     
     // function setHighScoreTextBox(){
     //   var value = []
     // }
 
 
-    //var highScoreHandler = function() {
-     // var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-     // console.log("highScores" + highScores)
-   // }
+  //   var highScoreHandler = function() {
+  //    var highScores = JSON.parse(window.localStorage.getItem(value, score)) || [];
+  //    console.log("highScores" + highScores)
+  //    document.querySelector("#highScoreTextField").textContent = highScores;
+  //  }
 
 
 
