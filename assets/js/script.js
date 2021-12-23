@@ -1,13 +1,13 @@
 var questionsEl = document.querySelector("#questions");
 var paragraph1 = document.querySelector("#paragraph-pg1");
 var optionsEl = document.querySelector("#options");
-
-// var score = timeSecond;
+var highScoreBoxEl = document.querySelector('#high-score-box');
+var submitButtonEl = document.querySelector('#submit-btn');
 
 
 // var correctPopup = document.querySelector('#correct')
 // var wrongPopup = document.querySelector('#wrong')
-
+let countdown;
 
 //sound fx
 var soundFxCorrect = new Audio("audio/correct.mp3");
@@ -15,14 +15,15 @@ var soundFxWrong = new Audio("audio/wrong.mp3");
 
 // set variable for the start button
 var startButton = document.querySelector("#start-btn");
-let timeSecond = questions.length *15;
+var timeSecond = questions.length *15;
 // use new variable for button to create event listener for the click - everytime hit clicks it starts timer
 startButton.addEventListener("click", function() {
     
     //timer within the function - https://www.youtube.com/watch?v=_a4XCarxwr8
     var countdownEl = document.querySelector("#time-sec");
     countdownEl.innerHTML =`00:${timeSecond}`;
-    let countdown = setInterval (()=>{
+
+    countdown = setInterval (()=>{
         timeSecond--;
         countdownEl.innerHTML =`00:${timeSecond}`;
         if(timeSecond <= 0 || timeSecond < 1){
@@ -92,12 +93,62 @@ startButton.addEventListener("click", function() {
   
 
 function endQuiz() {
+  clearInterval(countdown);
+  questionsEl.classList.remove('hide');
     questionsEl.textContent = "All done!";
     optionsEl.textContent = "Your final score is " + [timeSecond] + ".";
-    timeSecond = clearInterval(timeSecond);
-
+    optionsEl.setAttribute("class", "final-score-text")
+    highScoreBoxEl.classList.remove('hide');
+    highScoreBoxEl.setAttribute("class", "high-score-div")
+    
 }
 
 
 
     startButton.addEventListener("click", startGame);
+    
+    
+    submitButtonEl.addEventListener("click", highScoreHandler);
+    
+
+
+
+//scores and local storage
+
+  //   var highScoreHandler = function(event) {
+  //     var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+  //     console.log("highScores" + highScores)
+  //     event.preventDefault();
+  //     var initialsInput = document.querySelector("input[name='initials']");
+
+  //     if (!initialsInput) {
+  //       alert("You need to enter your initials");
+  //           return false;
+  //     };
+    
+
+  //   var highScoreObj = {
+  //     name: initialsInput,
+  //     score: finalScore
+  //   };
+
+  //   highScores.push(highScoreObj);       
+  //   console.log(highScores);
+
+  //   localStorage.setItem("highScores", JSON.stringify(highScores));
+
+  //   window.location.href= "highscores.html"
+  // };
+
+
+  // var loadHighScore = function() {
+  //   var savedHighScore = localStorage.getItem("highScores");
+  //   if (!savedHighScores) {
+  //     return false;
+  //   }
+  //   savedHighScores = JSON.parse(savedHighScores);
+
+  //   for (var i = 0; i < savedHighScores.length ; i++) {
+  //     createHighScore(savedHighScores[i]);
+  //   }
+  // }

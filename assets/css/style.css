@@ -2,11 +2,6 @@
     box-sizing: border-box;    
 }
 
-body {
-    
-}
-
-
 header {
     display: flex;
     justify-content: space-between;
@@ -137,4 +132,46 @@ section div button:hover {
     color: lightgray;
     font-size: 40px;
     border-top: 2px solid lightgray;
+}
+
+.high-score-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+
+.submit-btn {
+    margin-left: 20px;
+    padding: 10px;
+    background-color:darkblue;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+                0px 6px 10px 0 rgba(0,0,0,0.1);
+}
+
+
+.input-field {
+    margin-bottom: 10px;
+}
+
+.input-txt-field {
+    padding: 20px;
+}
+
+.final-score-text {
+    text-decoration: underline;
+    padding: 15px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-align: center;
+
 }
