@@ -20,13 +20,14 @@ let timeSecond = questions.length *15;
 startButton.addEventListener("click", function() {
     
     //timer within the function - https://www.youtube.com/watch?v=_a4XCarxwr8
-    const countdownEl = document.querySelector("#time-sec");
+    var countdownEl = document.querySelector("#time-sec");
     countdownEl.innerHTML =`00:${timeSecond}`;
-    const countdown = setInterval (()=>{
+    let countdown = setInterval (()=>{
         timeSecond--;
         countdownEl.innerHTML =`00:${timeSecond}`;
         if(timeSecond <= 0 || timeSecond < 1){
             clearInterval(countdown);
+            endQuiz();
         }
     },1000)
   });
@@ -46,13 +47,13 @@ startButton.addEventListener("click", function() {
     optionsEl.textContent = "";      // makes H1 go away
 
  
-// question
+      // question
       var h1 = document.createElement("H1");
       h1.style.textAlign = "center";
       h1.textContent = questions[currentQuestionIndex].question;
       optionsEl.appendChild(h1);
-
-//answer    
+ 
+     //answer    
     currentQuestion.options.forEach((answer, index) => {
       var buttonOption = document.createElement("button");
       buttonOption.setAttribute("class", "option-buttons")
@@ -63,6 +64,7 @@ startButton.addEventListener("click", function() {
     
       optionsEl.append(buttonOption)
     });
+    
 }
     function answerClick(answer) {
       console.log('answer function')
@@ -79,19 +81,23 @@ startButton.addEventListener("click", function() {
         //correctPopup.className = "hide";
       }
       currentQuestionIndex++;
-      startGame();
-    }
+      if (currentQuestionIndex === questions.length){
+          endQuiz();
+      } else {
+        startGame();
+      }
+
+
+      }
   
 
-function scorePage() {
-    // when there are no more questions left, head to the score page and stop the timer
-   var finalQuestion = questions[currentQuestionIndex];
-   
-    if(questions > questions.length) {
-        countdown = setInterval(); 
+function endQuiz() {
+    questionsEl.textContent = "All done!";
+    optionsEl.textContent = "Your final score is " + [timeSecond] + ".";
+    timeSecond = clearInterval(timeSecond);
 
-    }
 }
+
 
 
     startButton.addEventListener("click", startGame);
