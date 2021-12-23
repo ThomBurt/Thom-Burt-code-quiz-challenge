@@ -108,14 +108,32 @@ function endQuiz() {
     startButton.addEventListener("click", startGame);
     
     
-    submitButtonEl.addEventListener("click", highScoreHandler);
+    submitButtonEl.addEventListener("click", function(){
+      var value = document.getElementById('input').value;
+      var score = timeSecond;
+      console.log(value, score);
+        localStorage.setItem(value, score)
+        window.location.href = "highscores.html"
+        
     
+        // var done = document.getElementById("done")
+        // done.textContent= `Your final score is ' + ${score}`;
+    
+      });
+    
+    
+
+
+    //var highScoreHandler = function() {
+     // var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+     // console.log("highScores" + highScores)
+   // }
 
 
 
 //scores and local storage
 
-  //   var highScoreHandler = function(event) {
+  //   var highScoreHandler = function() {
   //     var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
   //     console.log("highScores" + highScores)
   //     event.preventDefault();

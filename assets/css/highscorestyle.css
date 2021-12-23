@@ -35,7 +35,7 @@ body {
 .high-score-container {
     width: 600px;
     max-width: 80%;
-    background-color:lavenderblush;
+
 }
 
 .high-score-h1 {
@@ -48,6 +48,7 @@ body {
     margin-bottom: 35px;
     padding: 15px;
     background-color: lightsteelblue;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }
