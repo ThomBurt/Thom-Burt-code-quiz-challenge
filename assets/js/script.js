@@ -75,7 +75,7 @@ startButton.addEventListener("click", function() {
        // correctPopup.classList.remove('hide');
         //wrongPopup.className = "hide";
       } else {
-        timeSecond = timeSecond-15;  // minus 15 if wrong
+        timeSecond = timeSecond-10;  // minus 10 if wrong
         //console.log("wrong answer")
         soundFxWrong.play()
        // wrongPopup.classList.remove('hide');
