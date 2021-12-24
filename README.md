@@ -1,6 +1,6 @@
 Thom's Code Quiz Challenge Read Me
 
-<img src="screenshots/final screenshot.PNG" alt="Thom's Code Quiz Final Deployment" width="480" height="250">
+<img src="screenshots/final screenshot.PNG" alt="Thom's Code Quiz Final Deployment" width="636" height="329">
 
 
 https://thomburt.github.io/Thom-Burt-code-quiz-challenge/
@@ -16,7 +16,7 @@ I started by building out the index.html file, or the 'home' page which is popul
 
 in the main body of the HTML file is the heading 'Coding Quiz Challenge' a short paragraph to explain the quiz and then the Start Button, which starts the quiz.
 
-
+g
 As you move your way through the quiz by clicking 'Start Quiz' you will notice the timer starting and you will be presented with the first question and set of answers. If you get the answer correct, you will hear the correct sound and it will move on to the next question.
 If you get the question wrong, you will hear the wrong sound, and be penalized with a 10 second time deduction, which will then move you on to the next question.
 
