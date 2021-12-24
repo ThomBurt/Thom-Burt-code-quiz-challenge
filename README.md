@@ -21,3 +21,6 @@ As you move your way through the quiz by clicking 'Start Quiz' you will notice t
 If you get the question wrong, you will hear the wrong sound, and be penalized with a 10 second time deduction, which will then move you on to the next question.
 
 Once you complete the quiz, you will be presented with your score, and have an input field where you are asked to put your initials and submit. Your score is then saved in the High Score HTML page, and you can choose to clear your high score list or go back.
+
+
+

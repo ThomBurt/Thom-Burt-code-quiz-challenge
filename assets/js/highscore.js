@@ -1,18 +1,18 @@
 var goBack = document.querySelector('#button-go-back')
+
 let clearHighScoreBtn = document.getElementById('clear-high-score-btn')
-
-
 
 var goBackButton = document.querySelector("#button-go-back")
 goBackButton.addEventListener("click", goBackToIndex)
 
+// button function for 'Go back' this will take you back to the start
 function goBackToIndex() {
     console.log('hello')
     window.location.assign("index.html");
 
 }
 
-
+// get the high scores from local storage
 function getHighScores() {
 
     var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
@@ -31,7 +31,7 @@ function getHighScores() {
     }
 
 }
-
+// function to clear the high scores when called upon
 function clearHighScores() {
     window.localStorage.removeItem("highScores");
     window.location.reload();

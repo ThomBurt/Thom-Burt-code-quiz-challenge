@@ -91,7 +91,7 @@ startButton.addEventListener("click", function() {
 
       }
   
-
+// End the quiz, stop the clock and present final score
 function endQuiz() {
   clearInterval(countdown);
   questionsEl.classList.remove('hide');
@@ -100,7 +100,6 @@ function endQuiz() {
     optionsEl.setAttribute("class", "final-score-text")
     highScoreBoxEl.classList.remove('hide');
     highScoreBoxEl.setAttribute("class", "high-score-div")
-    
 }
 
     
