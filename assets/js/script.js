@@ -103,32 +103,43 @@ function endQuiz() {
     
 }
 
-
-
-
-
-
-    startButton.addEventListener("click", startGame);
     
+function saveHighScores() {
+
+  if (document.getElementById('input').value != "") {
+    var highScores =
+      JSON.parse(window.localStorage.getItem("highScores")) || [];
+
+    // format new score object for current user
+    var newScore = {
+      initials: document.getElementById('input').value,
+      score: timeSecond,
+    };
+
+    highScores.push(newScore);
+
+    window.localStorage.setItem("highScores", JSON.stringify(highScores));
+
+    // redirect to next page
+    window.location.href = "highscores.html";
+  }
+
+}
+
+
+
+startButton.addEventListener("click", startGame);
     
-    submitButtonEl.addEventListener("click", function(){
-      var value = document.getElementById('input').value;
-      var score = timeSecond;
-      localStorage.setItem(value, score);
-      window.location.href = "highscores.html";
-        passingValue();
-
-     
-           });
+submitButtonEl.addEventListener("click", saveHighScores);
+    
 
 
-    // function passingValue(){
-    //   var scores = document.querySelector('#highScoreTextField');
-    //   scores.className = "hide";
-      // localStorage.getItem(value, score);
-      // scores.textContent = scores; 
-      // console.log(scores);
-    //}
+
+
+
+
+
+
         
 
 
@@ -140,62 +151,4 @@ function endQuiz() {
 
 
 
-    //TODO - how to get it into the text field of high scores   --    pull it from local storage?
-        // var highScoreTextField = document.querySelector("#highScoreTextField");
-        // highScoreTextField.textContent = (value + score);
-       
-
-      
-    
-    // function setHighScoreTextBox(){
-    //   var value = []
-    // }
-
-
-  //   var highScoreHandler = function() {
-  //    var highScores = JSON.parse(window.localStorage.getItem(value, score)) || [];
-  //    console.log("highScores" + highScores)
-  //    document.querySelector("#highScoreTextField").textContent = highScores;
-  //  }
-
-
-
-//scores and local storage
-
-  //   var highScoreHandler = function() {
-  //     var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-  //     console.log("highScores" + highScores)
-  //     event.preventDefault();
-  //     var initialsInput = document.querySelector("input[name='initials']");
-
-  //     if (!initialsInput) {
-  //       alert("You need to enter your initials");
-  //           return false;
-  //     };
-    
-
-  //   var highScoreObj = {
-  //     name: initialsInput,
-  //     score: finalScore
-  //   };
-
-  //   highScores.push(highScoreObj);       
-  //   console.log(highScores);
-
-  //   localStorage.setItem("highScores", JSON.stringify(highScores));
-
-  //   window.location.href= "highscores.html"
-  // };
-
-
-  // var loadHighScore = function() {
-  //   var savedHighScore = localStorage.getItem("highScores");
-  //   if (!savedHighScores) {
-  //     return false;
-  //   }
-  //   savedHighScores = JSON.parse(savedHighScores);
-
-  //   for (var i = 0; i < savedHighScores.length ; i++) {
-  //     createHighScore(savedHighScores[i]);
-  //   }
-  // }
+   
