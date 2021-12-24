@@ -1,6 +1,6 @@
 Thom's Code Quiz Challenge Read Me
 
-<img src="screenshots/final screenshot.PNG" alt="Thom's Code Quiz Final Deployment" width="636" height="329">
+<img src="screenshots/final screenshot.PNG" alt="Thom's Code Quiz Final Deployment" width="950" height="490">
 
 
 https://thomburt.github.io/Thom-Burt-code-quiz-challenge/
